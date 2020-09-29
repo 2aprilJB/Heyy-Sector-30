@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@700&display=swap');
+.CGFU__Main{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    width: 100%;
+}
+.Main_title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(0deg, #E03027 37.81%, #FCDE0B 77.58%);
+    border-radius: 40px;
+    margin: 0 auto;
+    width: 6.5rem;
+    height: 3rem;
+    margin-top: -1rem;
+}
+.Title_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 40px;
+    width: 80%;
+    height: 60%;
+    margin: 0 auto;
+    background-color: white;
+    font-family: 'Titillium Web';
+    color: #fff;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.575);
+    font-size: 1.6rem;
+}
+.Main_wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: #E03027;
+    border-radius: 40px;
+    width: 21rem;
+    margin: 0 auto;
+    margin-top: -0.5rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.Main_Map{
+    width: 19.4rem;
+    height: 14rem;
+    border: 3px solid#000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.Main_Rankings{
+    margin: 1rem auto;
+    background-color: #f0f0f0;
+    border-radius: 40px;
+    
+    height: 18rem;
+    width: 20rem;
+    overflow: scroll;
+}
+.Main_Rankings::-webkit-scrollbar{
+    width: 0rem;
+}
+@media (max-width:350px){
+    .Main_wrapper{
+        width: 19rem;
+    }
+    .Main_Map{
+        width: 17rem;
+        height: 13rem;
+    }
+    .Main_Rankings{
+        height: 17rem;
+        width: 18rem;
+    }
+}
+
+#map{
+    background-color: yellow;
+}

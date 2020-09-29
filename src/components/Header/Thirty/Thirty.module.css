@@ -1,0 +1,15 @@
+.Thirty{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: -5px;
+}
+.Three{
+    height: 100%;
+    margin-right: -14px;
+}
+.Zero{
+    height: 100%;
+}

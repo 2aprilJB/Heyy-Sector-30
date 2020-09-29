@@ -1,0 +1,46 @@
+.CovidInfo{
+    box-sizing: border-box;
+    margin: 0;
+}
+.CovidDiv{
+    height: 18rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Lintt{
+    position: absolute;
+    left: 50%;
+    top: -5%;
+    transform: translateX(-50%);
+    height: 6.3125rem;
+    width: 9.6875rem;
+}
+
+.InfoDiv{
+    position: relative;
+    height: 8rem;
+    background-image: linear-gradient(#fff, #3989d4ea);
+}
+/* Extra Navigation Stuff to Be inserted in this div */
+.InfoDiv__extraNavs{
+    height: 2.3rem;
+}
+
+.CovidInfo > div{
+    animation: moveUp 1s ease-out;
+}
+
+
+
+@keyframes moveUp{
+    0%{
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

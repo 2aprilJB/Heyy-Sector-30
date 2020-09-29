@@ -1,0 +1,9 @@
+.ChangeSubject{
+    color: black;
+    height: 1.3rem;
+    cursor: pointer;
+}
+.ChangeSubject ion-icon{
+    font-size: 1.4rem;
+    margin: 0;
+}
