@@ -4,7 +4,7 @@ import Middle from './components/CGFU__middle/CGFU__middle';
 import classes from './CGFU.module.css';
 import Main from './containers/CGFU__Main/C__Main';
 import ComingSoon from './components/CGFU__comingSoon/ComingSoon';
-import Footer from './components/CGFU__footer/Footer';
+import Footer from '../components/Footer/Footer';
 
 class CGFU extends Component{
     onClickHandler = ()=>{

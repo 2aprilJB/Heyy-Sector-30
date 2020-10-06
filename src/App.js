@@ -7,6 +7,7 @@ import EventPortal from './components/EventPortal/EventPortal';
 import OngoingEvent from './components/OngoingEvent/OngoingEvent';
 import Showcase2 from './containers/Showcase2/Showcase2';
 import Showcase3 from './containers/Showcase3/Showcase3';
+import EventForum from './components/EventForum/EventForum';
 
 function App() {
   return (
@@ -21,10 +22,12 @@ function App() {
               <CovidInfo/>
               <EventPortal/>
 
-              <Showcase2 activeSub = {1} modules = {['Ongoing Event','Know More','Event Forum']}>
+              <Showcase2 activeSub = {2} modules = {['Ongoing Event','Know More','Event Forum']}>
+
                 <OngoingEvent/>
                 <Showcase3 activeSub = {1} /> 
-                <div>The Forum You've been Waiting For</div>
+                <EventForum />
+
               </Showcase2>
 
             </Layout>

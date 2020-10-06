@@ -1,0 +1,48 @@
+.EventForum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3rem 3rem 0.4rem 0.4rem;
+    background-color: rgb(0, 162, 255);
+    height: 25rem;
+}
+.Ideation{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: max-content;
+}
+.IdeaButt{
+    position: relative;
+    border-radius: 40px;
+    padding: 0.5rem 2rem;
+    width: 8rem;
+    font-family: 'Arvo';
+    font-size: 1.4rem;
+    border: 0;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.541);
+    background-color: rgb(255, 255, 152);
+    margin: 1rem 0;
+    margin-top: 1.5rem;
+}
+.AnyIdeaButt{
+    background-color: whitesmoke;
+    position: absolute;
+    z-index: 10;
+    bottom: -94%;
+    width: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    height: max-content;
+    border-radius: 0px 0px 20px 20px;
+    border: 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.514);
+    border-top: 2px solid yellow;
+    transition: all 0.18s;
+}
+.AnyIdeaButt:active{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.658);
+}

@@ -19,7 +19,6 @@ const panel = ()=>{
                 </div>
             </div>
             <div className = {classes.OrganizerName}>Soumitra Jha</div>
-            <div className = {classes.Participate}>Participate</div>
         </div>
     );
 }
