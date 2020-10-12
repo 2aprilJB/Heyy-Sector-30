@@ -1,12 +1,18 @@
 
 .Face_1{
     text-align: center;
-    letter-spacing: 0.1rem;
-    line-height: 2rem;
+    letter-spacing: 0.2rem;
+    line-height: 2.5rem;
     border-radius: 10px;
     font-family: 'Oswald';
-    margin: 2rem 0;
+    margin: 1rem 0 0 0;
     animation: fadeIn 0.3s ease;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease-in-out;
 }
 .Vids{
     background-color: rgba(0, 0, 0, 0.473);
@@ -17,10 +23,8 @@
 @keyframes fadeIn{
     0%{
         opacity: 0;
-        transform: translateY(-20%);
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
     }
 }

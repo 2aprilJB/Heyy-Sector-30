@@ -6,17 +6,21 @@ import {withRouter} from 'react-router-dom';
 const menu = (props)=>{
     let onKnow = ()=>{
         props.backDrop();
+        window.scrollTo(100,800);
     }
+    let onThirty = ()=>props.history.push("/");
     let onCGFU = ()=>props.history.push("/CGFU");
+    let onBlogClick = ()=>props.history.push("/blogs");
     return(
         <div className = {classes.Menu}>
-            <div className = {classes.ThirtyContainer}>
+            <div onClick = {onThirty} className = {classes.ThirtyContainer}>
                 <Thirty />
             </div>
             <ul className = {classes.Menu__elements}>
                 <li onClick = {onCGFU}>CGFU</li>
                 <li onClick = {onKnow}>Know More</li>
                 <li>Ongoing Event</li>
+                <li onClick = {onBlogClick}>Lintt BLOGS</li>
             </ul>
 
             <div className = {classes.Menu__videos}></div>

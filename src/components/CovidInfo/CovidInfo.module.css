@@ -1,6 +1,7 @@
 .CovidInfo{
     box-sizing: border-box;
     margin: 0;
+    width: 100%;
 }
 .CovidDiv{
     height: 18rem;

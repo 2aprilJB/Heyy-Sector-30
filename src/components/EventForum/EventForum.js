@@ -2,30 +2,40 @@ import React, { Component } from 'react';
 import Showcase from '../../containers/Showcase/Showcase';
 import classes from './EventForum.module.css';
 import SubmitIdea from './SubmitIdea/SubmitIdea';
+import ShowSupportIdea from './ShowSupportIdea/ShowSupportIdea';
+import Spinner from '../../assets/Spinner/Spinner';
+import axios from 'axios';
 
 class EventForum extends Component{
     state = {
         anyIdea: false,
-        ideas: [
-            {
-                name: 'Some Event',
-                breif: 'Spit shit too hit no grit, make sslit rip it grip it dont let it slip dont let it slip no no',
-                author: 'Jamuna Das Patel',
-                date: '12/10/20',
-            },
-            {
-                name: 'Many Event',
-                breif: 'Spit shit too hit no grit, make sslit rip it grip it dont let it slip dont let it slip no no',
-                author: 'Hirla Bhai Motwani',
-                date: '16/11/20',
-            },
-        ],
+        disableAnyIdea: false,
+        loaded: false,
+        ideas: [],
+    }
+    componentDidMount(){
+        axios.get('https://heyy-sector-30.firebaseio.com/event-forum/ideas.json')
+             .then(response=>{
+                 this.setState({
+                     ideas: response.data,
+                     loaded: true,
+                 });
+             })
+             .catch(error=>{
+                 alert(error);
+                 return Promise.reject(error);
+             })
     }
     ideaButtClickHandler = ()=>{
-        let prevIdea = this.state.anyIdea;
         this.setState({
-            anyIdea: !prevIdea,
+            anyIdea: true,
         });
+    }
+    submitButtClickHandler = ()=>{
+        this.setState({
+            anyIdea: false,
+            disableAnyIdea: true,
+        })
     }
     render(){
         return(
@@ -33,16 +43,20 @@ class EventForum extends Component{
                 <div className = {classes.Ideation}>
                     <div className = {classes.IdeaButt}>
                         Any Idea?
-                        <div onClick = {this.ideaButtClickHandler} className = {classes.AnyIdeaButt}>+</div>
+                        {this.state.disableAnyIdea?null:<div onClick = {this.ideaButtClickHandler} className = {classes.AnyIdeaButt}>+</div>}
                     </div>
-                    {this.state.anyIdea?<SubmitIdea />:null}
+                    {this.state.anyIdea?<SubmitIdea onSubmission = {this.submitButtClickHandler} />:null}
                 </div>
                 <div className = {classes.IdeaShowcase}>
-                    <Showcase>
-                        {this.state.ideas.map(idea=>{
-                            return 
-                        })}
-                    </Showcase>
+                    {this.state.loaded?
+
+                        <Showcase top>
+                            {this.state.ideas.map((idea,ind)=>{
+                                return <ShowSupportIdea key = {ind + 'showNsupport'} idea = {idea} />
+                            })}
+                        </Showcase>
+
+                    :<Spinner/>}
                 </div>
             </div>
         );

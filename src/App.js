@@ -6,8 +6,9 @@ import CGFU from './CGFU/CGFU';
 import EventPortal from './components/EventPortal/EventPortal';
 import OngoingEvent from './components/OngoingEvent/OngoingEvent';
 import Showcase2 from './containers/Showcase2/Showcase2';
-import Showcase3 from './containers/Showcase3/Showcase3';
 import EventForum from './components/EventForum/EventForum';
+import KnowMore from './components/KnowMore/KnowMore';
+import Blogs from './Blogs/Blogs';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         
         <Switch>
           <Route path = "/CGFU" exact component = {CGFU} />
+          <Route path = "/blogs" exact component = {Blogs} />
           <Route path = "/" render = {()=>
             <Layout>
 
@@ -25,7 +27,7 @@ function App() {
               <Showcase2 activeSub = {2} modules = {['Ongoing Event','Know More','Event Forum']}>
 
                 <OngoingEvent/>
-                <Showcase3 activeSub = {1} /> 
+                <KnowMore activeSub = {0} />
                 <EventForum />
 
               </Showcase2>

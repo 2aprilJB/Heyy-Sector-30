@@ -10,7 +10,6 @@ const eventPortal = (props)=>{
             </div>
             <div className = {classes.StylingLine_1}></div>
             <Face />
-            <div className = {classes.LanguageBar}>Language Bar</div>
         </div>
     );
 }

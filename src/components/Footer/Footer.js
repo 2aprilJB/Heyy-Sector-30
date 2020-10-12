@@ -8,8 +8,12 @@ const footer = (props)=>{
     let aboutButtClickHandler = ()=>{
         props.history.push('/about');
     }
+    let style = {};
+    props.shadowTop?style = {
+        boxShadow: '0px -4px 25px  rgba(255, 255, 255, 0.527)',
+    }: style = null;
     return(
-        <div className = {classes.Footer}>
+        <div style = {style} className = {classes.Footer}>
             <h2 className = {classes.LinttHere}>Lintt HERE</h2>
             <h3 className = {classes.Motto}>Making happenings Happen</h3>
 

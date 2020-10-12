@@ -1,0 +1,88 @@
+.Post{
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0px 0px 21px rgba(0, 0, 0, 0.26);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Oswald';
+    width: 90%;
+    margin-bottom: 1.5rem;
+}
+
+.Claps{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    border-radius: 50px;
+    border: 3px solid rgb(255, 51, 0);
+    width: 6rem;
+    background-color: whitesmoke;
+    bottom: 0;
+    right: 0.2rem;
+}
+.ClapButt{
+    border-radius: 100px;
+    width: 40%;
+}
+.Counter{
+    width: 50%;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.Title{
+    margin: 0.5rem 0 0 0 ;
+    font-size: 2rem;
+}
+.PostHeroImg{
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+    margin: 0.7rem 0;
+    height: 10rem;
+    width: 14rem;
+    box-shadow: 0px 0px 20px rgba(0, 162, 255, 0.637);
+}
+.Brief{
+    margin: 0;
+    text-align: center;
+    overflow: scroll;
+    height: max-content;
+    max-height: 6rem;
+    width: 70%;
+}
+.Brief::-webkit-scrollbar{
+    width: 0.1rem;
+}
+.DateShare{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    padding-bottom: 0.5rem;
+    color: darkred;
+}
+.Date{
+    margin: 0;
+}
+.Expand{
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100px;
+    background-color: darkorange;
+    box-shadow: 0px 0px 10px rgb(255, 150, 29);
+    position: absolute;
+    bottom: 0.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.Expand ion-icon{
+    transform: translateY(-8%);
+}

@@ -77,15 +77,13 @@
 .Upvotes_button ion-icon{
     margin: 0 0 0 -0.1rem;
 }
-.Clap_button{
-}
-.Upvotes, .Claps{
+.Upvotes{
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 100%;
 }
-.Clap_count, .Upvote_count{
+.Upvote_count{
     font-size: 1rem;
     display: flex;
     align-items: center;
@@ -97,6 +95,12 @@
     padding-right: 1rem;
 }
 
-.Clap_count > div{
-    margin-left: 10rem;
+
+.FullEntry{
+    margin: 0 auto;
+    width: 95%;
+    height: 10rem;
+    background-position: center;
+    background-size: cover;
 }
+

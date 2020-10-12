@@ -1,0 +1,138 @@
+.MainWrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    height: max-content;
+    width: 100%;
+}
+.HeaderMenu{
+    position: relative;
+    background-color: #000;
+    padding: 1rem 0;
+    margin: 0 0 0 0;
+    width: 100%;
+    border-radius: 0 0 20px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.Menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 3.5rem;
+    width: 3.5rem;
+    background-color: rgb(49, 131, 255);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.548);
+    border-radius: 100px;
+    right: 1.3rem;
+    top: 50%;
+    transform: translateY(-60%);
+    transition: all 0.12s;
+}
+.Menu:active{
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.548);
+}
+.Menu ion-icon{
+    font-size: 2.5rem;
+    color: #fff;
+}
+.LinttContainer{
+    width: 10rem;
+    height: 7rem;
+}
+.LinttButt{
+    margin: 0 auto;
+    border-radius: 100px;
+    background-color: white;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.849);
+    height: 6rem;
+    width: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20;
+}
+
+.HeroDisplay{
+    margin: 1rem 0;
+    width: 98%;
+    height: 10rem;
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.815);
+    font-family: 'Open Sans';
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    color: #fff;
+}
+.HeroDisplay > div{
+    width: 100%;
+}
+.Stick{
+    height: 15rem;
+    width: 0.4rem;
+    background: linear-gradient(64.24deg, #FCDE0B 37.81%, #E03027 77.58%);
+    position: absolute;
+    margin-top: 1.8rem;
+    top: 4.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.LWDN{
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    transition: all 0.15s;
+}
+.LWDN:active{
+    box-shadow: 0px 5px 18px rgba(0, 0, 0, 0.466);
+}
+.BlogsOptions{
+    position: relative;
+    width: 92%;
+    height: max-content;
+    background-color: #fffb10;
+    border-radius: 30px;
+    margin: 0.4rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2.5%;
+    border: 4px solid  rgb(179, 0, 0);
+}
+.AuthorButt, .CategoriesButt{
+    letter-spacing: 0.2rem;
+    background-color: white;
+    border-radius: 20px;
+    border: 7px solid rgb(179, 0, 0);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.384);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    color: rgb(0, 0, 0);
+    font-size: 0.9rem;
+    font-family: 'Oswald';
+    font-weight: bolder;
+    text-align: center;
+
+    transition: all 0.5s;
+}
+.AuthorButt:active, .CategoriesButt:active{
+    border: 7px solid#19d3da;
+}

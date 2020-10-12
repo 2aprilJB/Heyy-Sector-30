@@ -39,21 +39,9 @@ class InfoBar extends Component{
                     <Route path = "/" component = {SubjectHandler} /> {/*Passed Subject handler through Route : So i can have access to prop.history*/}
                 </div>
                 
-                    {Object.keys(this.state.subjects).map(sub=>{
-                        let temp = "/" + sub;
-                        if(sub === "default"){
-                            temp = "/";
-                        }
-                        return <Route key = {"forInfo" + sub} exact path = {temp} 
-                        render = {()=>
-                        <div className = {classes.Infobar__info}>
-                            <div className = {classes.Infobar__info_icon}><ion-icon name = "time" /></div>
-                            <div className = {classes.Infobar__info_data}>
-                                {this.state.subjects[sub].info}
-                            </div>
-                            <div className = {classes.StylingLine}></div>
-                        </div>} />;
-                    })}
+                <div className = {classes.Infobar__info}>
+                    
+                </div>
 
                 <div className = {classes.Infobar__navigation}>
                     <div><ion-icon name = "heart-circle-outline" /></div>
@@ -65,3 +53,20 @@ class InfoBar extends Component{
 }
 
 export default InfoBar;
+
+// Early GLOBAL subject handling INFOBAR div::-
+// {Object.keys(this.state.subjects).map(sub=>{
+//     let temp = "/" + sub;
+//     if(sub === "default"){
+//         temp = "/";
+//     }
+//     return <Route key = {"forInfo" + sub} exact path = {temp} 
+//     render = {()=>
+//     <div className = {classes.Infobar__info}>
+//         <div className = {classes.Infobar__info_icon}><ion-icon name = "time" /></div>
+//         <div className = {classes.Infobar__info_data}>
+//             {this.state.subjects[sub].info}
+//         </div>
+//         <div className = {classes.StylingLine}></div>
+//     </div>} />;
+// })}

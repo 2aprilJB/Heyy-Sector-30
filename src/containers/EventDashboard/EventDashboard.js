@@ -1,59 +1,26 @@
 import React, { Component } from 'react';
 import Dashboard from './Dashboard/Dashboard__Entry';
 import classes from './EventDashboard.module.css';
+import axios from 'axios';
+import Spinner from '../../assets/Spinner/Spinner';
 
 class EventDashboard extends Component{
     state = {
-        entries: [
-            {
-                entryUrl: 'https://i.ytimg.com/vi/6lt2JfJdGSY/maxresdefault.jpg',
-                entryName: 'Akshita',
-                claps: 10,
-                upVotes: 12,
-            },
-            {
-                entryUrl: 'https://epsilon.aeon.co/images/314eda91-dfc1-4247-b52c-4ba3e6476e8b/idea_sized-samg-trinh-6037081748_038ef4ce2d_o.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 2,
-            },
-            {
-                entryUrl: 'https://i.pinimg.com/originals/a0/e4/d7/a0e4d70b0f0bc1156843053395c1c123.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 14,
-            },
-            {
-                entryUrl: 'https://wallpapercave.com/wp/wp2665203.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 32,
-            },
-            {
-                entryUrl: 'https://epsilon.aeon.co/images/314eda91-dfc1-4247-b52c-4ba3e6476e8b/idea_sized-samg-trinh-6037081748_038ef4ce2d_o.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 41,
-            },
-            {
-                entryUrl: 'https://epsilon.aeon.co/images/314eda91-dfc1-4247-b52c-4ba3e6476e8b/idea_sized-samg-trinh-6037081748_038ef4ce2d_o.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 34,
-            },
-            {
-                entryUrl: 'https://epsilon.aeon.co/images/314eda91-dfc1-4247-b52c-4ba3e6476e8b/idea_sized-samg-trinh-6037081748_038ef4ce2d_o.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 27,
-            },
-            {
-                entryUrl: 'https://epsilon.aeon.co/images/314eda91-dfc1-4247-b52c-4ba3e6476e8b/idea_sized-samg-trinh-6037081748_038ef4ce2d_o.jpg',
-                entryName: 'Akshay',
-                claps: 0,
-                upVotes: 29,
-            },
-        ],
+        loaded: false,
+        entries: [],
+    }
+    componentDidMount(){
+        axios.get('https://heyy-sector-30.firebaseio.com/ongoing-event/entries.json')
+             .then(response=>{
+                 this.setState({
+                     entries: response.data,
+                     loaded: true,
+                 });
+             })
+             .catch(error=>{
+                 alert(error);
+                 return Promise.reject(error);
+             })
     }
     onClapHandler = (entry, ind)=>{
         entry.claps++;
@@ -62,9 +29,12 @@ class EventDashboard extends Component{
         this.setState({
             entries: tempEntries,
         });
+        axios.put('https://heyy-sector-30.firebaseio.com/ongoing-event/entries.json',tempEntries);
     }
     render(){
         return(
+            this.state.loaded?
+
             <div className = {classes.EventDashboard}>
                 <div className = {classes.Event_Title}>PhotoGraphy</div>
                 
@@ -75,6 +45,8 @@ class EventDashboard extends Component{
                     })}
                 </div>
             </div>
+
+            :<Spinner />
         );
     }
 }

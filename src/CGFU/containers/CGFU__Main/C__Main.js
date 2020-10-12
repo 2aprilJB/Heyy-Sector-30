@@ -14,6 +14,12 @@ class CGFU__Main extends Component{
     }
     componentDidMount(){
         //Make Axios request for setting State of ::ArrayOfSectorInfo::
+        axios.interceptors.response.use(response=>{
+            return response;
+        },error=>{
+            alert(error);
+            return Promise.reject(error);
+        });
         axios.get('https://react-my-burger-ecca4.firebaseio.com/sector_Info.json')
              .then(response=>{
                  this.setState({

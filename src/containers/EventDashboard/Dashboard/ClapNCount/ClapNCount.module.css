@@ -1,0 +1,20 @@
+.Claps{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.Clap_count{
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 40px;
+    width: 3.8rem;
+    height: 80%;
+    background-color: #fff;
+    padding-right: 1rem;
+}
+.Clap_count > div{
+    margin-left: 10rem;
+}
