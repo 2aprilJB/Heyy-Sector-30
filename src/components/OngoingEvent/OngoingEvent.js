@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './OngoingEvent.module.css';
 import EventDashboard from '../../containers/EventDashboard/EventDashboard';
-import OngoingEventInfoPanel from './OngoingEventInfoPanel/OngoingEventInfoPanel';
+import OngoingEventInfoPanel from './InfoPanel/OngoingEventInfoPanel';
 import OrganizersPanel from './OrganizersPanel/OrganizersPanel';
 import StyledBreak from '../Footer/StyledBreak/StyledBreak';
 

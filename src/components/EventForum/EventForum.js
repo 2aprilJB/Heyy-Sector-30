@@ -3,6 +3,7 @@ import Showcase from '../../containers/Showcase/Showcase';
 import classes from './EventForum.module.css';
 import SubmitIdea from './SubmitIdea/SubmitIdea';
 import ShowSupportIdea from './ShowSupportIdea/ShowSupportIdea';
+import Background from '../../assets/Images/Events_back.jpg';
 import Spinner from '../../assets/Spinner/Spinner';
 import axios from 'axios';
 
@@ -47,7 +48,7 @@ class EventForum extends Component{
                     </div>
                     {this.state.anyIdea?<SubmitIdea onSubmission = {this.submitButtClickHandler} />:null}
                 </div>
-                <div className = {classes.IdeaShowcase}>
+                <div className = {classes.IdeaShowcase} style = {{background: 'url('+Background+')'}}>
                     {this.state.loaded?
 
                         <Showcase top>

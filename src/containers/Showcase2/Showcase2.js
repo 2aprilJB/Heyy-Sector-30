@@ -12,19 +12,11 @@ class Showcase2 extends Component{
     state = {
         activeContent: this.props.children[this.props.activeSub],
         activeIndex: this.props.activeSub,
-        tabClasses: [classes.Tab,classes.ActiveTab],
-        clicks: 1,
     }
     onClickHandler = (toRender,index)=>{
-        let clickCount = this.state.clicks;
-        let tabClasses = [classes.Tab];
-        tabClasses.push(classes.ActiveTab);
-        
         this.setState({
             activeContent: toRender,
-            clicks: clickCount,
             activeIndex: index,
-            tabClasses: tabClasses,
         });
     }
     render(){
@@ -33,7 +25,7 @@ class Showcase2 extends Component{
                 {this.props.children.map((module,ind)=>{
                     return (
                         <div className = {classes.Showing} key = {'showing_' + ind}>
-                            <div onClick = {()=>this.onClickHandler(module,ind)} className = {ind===this.state.activeIndex?this.state.tabClasses.join(' '):classes.Tab}>
+                            <div onClick = {()=>this.onClickHandler(module,ind)} className = {classes.Tab} style = {ind===this.state.activeIndex?{backgroundColor: this.props.colors[1], borderRadius: '100px'}:{backgroundColor: this.props.colors[0]}}>
                                 <div className = {classes.PlusMinusContainer}>
                                     <div className = {classes.PlusMinus}></div>
                                 </div>    

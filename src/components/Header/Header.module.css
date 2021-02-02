@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Open+Sans:wght@800&display=swap');
 .Header{
     position: relative;
-    background-image: linear-gradient(#E3016C,#fff);
     box-sizing: border-box;
     height: 10rem;
     width: 100%;
@@ -13,7 +12,7 @@
 /* 30-Container */
 .SectorThirtyContainer{
     position: absolute;
-    z-index: 50;
+    z-index: 30;
     left: 50%;
     transform: translateX(-50%);
     background-color: #FFCD3C;
@@ -96,7 +95,13 @@ ion-icon{
 .Red{
     color: rebeccapurple;
 }
-
+.Lintt{
+    position: absolute;
+    bottom: -2.65rem;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+}
 @keyframes expandIn{
     0%{
         opacity: 0;

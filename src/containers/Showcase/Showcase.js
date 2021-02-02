@@ -32,6 +32,12 @@ class Showcase extends Component{
     }
     render(){
         // Note: you must add prop "top" or "bottom" to specify where navigation panel shall be TOP or Bottom
+    let inactiveTabStyle = null;
+    let activeTabStyle = {border: "3px solid red"};
+    if(this.props.small){
+        activeTabStyle = {border: "3px solid red",width: '0.5rem',height: '0.5rem'};
+        inactiveTabStyle = {width: '0.5rem', height: '0.5rem'};
+    }
     return(
         <div className = {classes.Showcase}>
             {this.props.bottom?<div className = {classes.Content}>{this.state.Content}</div>:null}
@@ -40,7 +46,7 @@ class Showcase extends Component{
             <div className = {classes.ShowTabs}>
                 <ion-icon onClick = {this.backClickHandler} name = "arrow-back-circle"/>
                 {this.props.children.map((tab,ind)=>{
-                    return <div style = {this.state.index === ind ?{border: "3px solid red"}:null} key = {ind + 'tabs'} onClick = {()=>this.onTabClick(tab,ind)} className = {classes.Tabs}> </div>;
+                    return <div style = {this.state.index === ind ?activeTabStyle:inactiveTabStyle} key = {ind + 'tabs'} onClick = {()=>this.onTabClick(tab,ind)} className = {classes.Tabs}> </div>;
                 })}
                 <ion-icon onClick = {this.forwardClickHandler} name = "arrow-forward-circle"/>
             </div>

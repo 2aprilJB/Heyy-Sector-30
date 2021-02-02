@@ -5,30 +5,68 @@
     flex-direction: row;
     margin: 0 auto;
     padding: 0 0.25%;
-    height: 6.5rem;
-    width: 18.775rem;
-    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
-    border: 6px solid rgb(124, 0, 0);
-    border-radius: 15px;
-    background-color: #fff;
+    height: 7.5rem;
+    width: 17.775rem;
+    border-radius: 50px;
+    background-color: rgb(255, 255, 255);
     animation: glow 3s ease-in-out;
     animation-iteration-count: infinite;
 }
 
 .Infobar__subject{
-    width: 25%;
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Infobar a{
+    text-decoration: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    background-color: crimson;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Infobar__subject img{
+    width: 3.2rem;
+    height: 1.6rem;
+    border: 3px solid#000;
+    border-radius: 100px;
+    padding: 1.7rem 0.28rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.514);
 }
 
 .Infobar__info{
-    width: 50%;
-    height: 90%;
-    margin-top: 2%;
+    position: relative;
+    width: 70%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
-    border-radius: 5px;
+    border-radius: 12px;
+    margin-top: 3%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.801);
+    border: 3px solid#860000;
+}
+.ExpandButt{
+    position: absolute;
+    background-color: aqua;
+    border: 3px solid#860000;
+    bottom: -1.8rem;
+    z-index: 1;
+    border-radius: 0 0 10px 10px;
+    width: 1.4rem;
+    height: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Infobar ion-icon{
+    transform: translateY(-8%);
 }
 
 .Infobar__info_icon{
@@ -53,7 +91,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 @keyframes glow{
@@ -63,7 +101,7 @@
     }
     50%{
         box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.021);
-        border: 6px solid rgb(211, 0, 0);
+        border: 6px solid #860000;
     }
     100%{
         box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);

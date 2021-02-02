@@ -1,10 +1,11 @@
 import React from 'react';
 import Thirty from './Thirty/Thirty';
 import classes from './Header.module.css';
+import Lintt from '../../assets/Lintt/Lintt';
 
 const header = (props)=>{
     return(
-        <div className = {classes.Header}>
+        <div className = {classes.Header} style = {{background:'linear-gradient('+  props.color + ',#fff)'}}>
             
             <div className = {classes.SectorThirtyContainer}>
                     <div className = {classes.Sector}>SECTOR</div>
@@ -19,9 +20,10 @@ const header = (props)=>{
                 </div>
             </div>
 
-            <div className = {classes.Gandhinagar}>
+            {props.Gandhinagar?<div className = {classes.Gandhinagar}>
                 GANDHINAGAR
-            </div>
+            </div>:
+            <div className = {classes.Lintt} style = {{width: '8rem'}}><Lintt/></div>}
         </div>
     );
 }

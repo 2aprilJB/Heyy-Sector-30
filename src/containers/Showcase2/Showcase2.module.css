@@ -3,11 +3,11 @@
     width: 17rem;
     height: 3rem;
     margin: 0.3rem auto;
-    background-color: rgb(65, 137, 219);
     display: flex;
     flex-direction: row;
     border-radius: 100px 0 150px 0;
     transition: all 1.5s ;
+    text-shadow: 0px 0px 5px #fff;
 }
 .ContentName{
     display: flex;

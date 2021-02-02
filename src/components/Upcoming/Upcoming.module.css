@@ -1,0 +1,59 @@
+.MainContainer{
+    width: 97%;
+    height: max-content;
+    min-height: 10rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+}
+.Title{
+    border-radius: 10px 10px 0 0;
+    margin: 0;
+    padding: 0.2rem 0.5rem 0.3rem 0.5rem;
+    font-family: 'Oswald';
+    background-color: #fff;
+    text-align: center;
+    width: max-content;
+    font-size: 1.3rem;
+    letter-spacing: 0.2rem;
+    border: 3px solid cyan;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.452);
+}
+.Events{
+    border: 3px solid cyan;
+    border-radius: 1rem;
+    width: 20rem;
+    height: 7.5rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.342);
+}
+.Card{
+    background-color: rgb(231, 177, 0);
+    border-radius: 10px;
+    font-family: 'Oswald';
+    height: 6rem;
+    width: 5rem;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Card ion-icon{
+    font-size: 2rem;
+}
+.Events :nth-child(2){
+    height: 6.5rem;
+    width: 5.4rem;
+    background-color: azure;
+    border: 6px solid #860000;
+}
+.Events :first-child, .Events :last-child{
+    background-color: rgb(141, 141, 141);
+}

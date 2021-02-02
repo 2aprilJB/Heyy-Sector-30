@@ -1,7 +1,6 @@
 .CGFU__body{
     margin: 0;
     padding: 0;
-    height: 50rem;
     background-color: #fff;
     display: flex;
     flex-direction: column;
@@ -9,7 +8,7 @@
 }
 .News{
     padding: 1rem 0;
-    width: 100%;
+    width: 70%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -19,5 +18,6 @@
     color:#931a25;
 }
 .News ion-icon{
-    font-size: 2.5rem;
+    font-size: 3.5rem;
+    color: rgb(255, 60, 0);
 }

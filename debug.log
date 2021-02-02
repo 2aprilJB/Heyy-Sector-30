@@ -12,3 +12,6 @@
 [0831/012438.461:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
 [0831/013736.969:ERROR:crash_report_database_win.cc(428)] unexpected header
 [0831/014155.110:ERROR:crash_report_database_win.cc(428)] unexpected header
+[1101/144234.109:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1213/210313.738:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1214/031338.711:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)

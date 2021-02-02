@@ -6,29 +6,29 @@ import Spinner from '../../../assets/Spinner/Spinner';
 
 class Posts extends Component{
     state = {
-        blogs: null,
-        blogsLoaded: false,
+        blogs: this.props.blogs,
+        blogsLoaded: true,
         blogsFailed: false,
     }
     componentDidMount(){
-        let fetchUrl = 'https://linttblogs.firebaseio.com/blogOauthor.json';
-        if(this.props.cat){
-            fetchUrl = 'https://linttblogs.firebaseio.com/blogOcategory.json'
-        }
+        // let fetchUrl = 'https://linttblogs.firebaseio.com/blogOauthor.json';
+        // if(this.props.cat){
+        //     fetchUrl = 'https://linttblogs.firebaseio.com/blogOcategory.json'
+        // }
         
-        axios.get(fetchUrl)
-            .then(response=>{
-                this.setState({
-                    blogs: response.data,
-                    blogsLoaded: true,
-                });
-            })
-            .catch(error=>{
-                this.setState({
-                    blogsFailed: true,
-                    blogsLoaded: true,
-                })
-            });
+        // axios.get(fetchUrl)
+        //     .then(response=>{
+        //         this.setState({
+        //             blogs: response.data,
+        //             blogsLoaded: true,
+        //         });
+        //     })
+        //     .catch(error=>{
+        //         this.setState({
+        //             blogsFailed: true,
+        //             blogsLoaded: true,
+        //         })
+        //     });
     }
 
     onClapClickHandler = (ind)=>{

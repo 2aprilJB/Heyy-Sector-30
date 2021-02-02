@@ -16,11 +16,11 @@ class Post extends Component{
     render(){
         let postObj = this.props.post;
         return(
-            <div className = {classes.Post}>
-                <div className = {classes.Claps}>
+            <div style = {this.props.noBox?{'boxShadow': '0px 0px 0px'}:null} className = {classes.Post}>
+                {this.props.noClaps?null:<div className = {classes.Claps}>
                     <button onClick = {()=>this.props.clapClick(this.props.index)} className = {classes.ClapButt}><ClapIcon /></button>
                     <div className = {classes.Counter}>{postObj.claps}</div>
-                </div>
+                </div>}
 
                 <h3 className = {classes.Title}>{postObj.title}</h3>
                 <div onClick = {this.forModal} style = {{backgroundImage: 'url(' + postObj.postHeroImg + ')'}} className = {classes.PostHeroImg}></div>

@@ -18,20 +18,11 @@ class Blogs extends Component{
         blogOcategory: [],
     }
     componentDidMount(){
-        axios.get('https://linttblogs.firebaseio.com/blogOauthor.json')
+            axios.get('https://linttblogs.firebaseio.com/.json')
              .then(response=>{
                  this.setState({
-                     blogOauthor: response.data,
-                     blogsLoaded: true,
-                 });
-             })
-             .catch(error=>{
-                 alert(error);
-             });
-        axios.get('https://linttblogs.firebaseio.com/blogOcategory.json')
-             .then(response=>{
-                 this.setState({
-                     blogOcategory: response.data,
+                     blogOauthor: response.data.blogOauthor,
+                     blogOcategory: response.data.blogOcategory,
                      blogsLoaded: true,
                  });
              })
@@ -89,10 +80,10 @@ class Blogs extends Component{
 
                 <div className = {classes.HeroDisplay}>
                     <div>
-                        <p className = {classes.HeroText}>About Myself well go fuck ypurself</p>
+                        <p className = {classes.HeroText}>About Myself well go that way he'll be there.</p>
                     </div>
                     <div>
-                        <h4 className = {classes.HeroHeading}>Something That'll Be red</h4>
+                        <h4 className = {classes.HeroHeading}>Come Blog<br></br>with Us</h4>
                     </div>
                 </div>
 

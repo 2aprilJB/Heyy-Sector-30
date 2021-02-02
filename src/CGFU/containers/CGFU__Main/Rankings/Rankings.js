@@ -4,6 +4,7 @@ import classes from './Rankings.module.css';
  
 class Rankings extends Component{
     render(){
+        let props = this.props.localityProps;
         return(
             <div className = {classes.Rankings}>
                 <div className = {classes.Rank}>
@@ -15,10 +16,10 @@ class Rankings extends Component{
                     <div className = {classes.LocalityInfo}>
                         <div className = {classes.Locality}>Sector-{this.props.sector}</div>
                         <div className = {classes.Information}>
-                            <InformModule type = 'active' iconName = "fitness" data = {this.props.localityProps.active} />
-                            <InformModule type = 'recovered' iconName = "heart-circle-outline" data = {this.props.localityProps.recovered} />
-                            <InformModule type = 'deaths' iconName = "skull" data = {this.props.localityProps.deaths} />
-                            <InformModule type = 'containment' iconName = "bed" data = {this.props.localityProps.containment} />
+                            <InformModule type = 'active' iconName = "fitness" data = {props.active} />
+                            <InformModule type = 'recovered' iconName = "heart-circle-outline" data = {props.recovered} />
+                            <InformModule type = 'deaths' iconName = "skull" data = {props.deaths} />
+                            <InformModule type = 'containment' iconName = "bed" data = {props.containment} />
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classes from './EventSupport.module.css';
+import SupportInfo from './SupportInfo/SupportInfo';
 
 class EventSupport extends Component{
     state = {
@@ -20,7 +21,7 @@ class EventSupport extends Component{
                 </div>
                 <div style = {{backgroundColor: support.buttColor}} onClick = {this.toggleSupportInfo} className = {classes.ToggleSupportInfo}>{support.name}</div>
 
-                {this.state.toggleFullSupport?support.supportInfo:<div className = {classes.Some}>{support.placeHolderInfo}</div>}
+                {this.state.toggleFullSupport?<SupportInfo/>:<div className = {classes.Some}>{support.placeHolderInfo}</div>}
                 
             </div>
         );

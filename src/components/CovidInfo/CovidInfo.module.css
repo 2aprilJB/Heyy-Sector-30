@@ -1,7 +1,23 @@
+/* Colors Used earlier
+Blue: #3989d4ea */
+
+
 .CovidInfo{
     box-sizing: border-box;
     margin: 0;
     width: 100%;
+    position: relative;
+    animation: moveUp 1s ease-out;
+}
+.StylingLine{
+    height: 5rem;
+    width: 0.5rem;
+    position: absolute;
+    top: -8%;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.548);
+    animation: glowingStick 0.1s ease-in-out infinite;
 }
 .CovidDiv{
     height: 18rem;
@@ -17,23 +33,44 @@
     transform: translateX(-50%);
     height: 6.3125rem;
     width: 9.6875rem;
+    z-index: 2;
 }
 
 .InfoDiv{
     position: relative;
-    height: 8rem;
-    background-image: linear-gradient(#fff, #3989d4ea);
+    height: 22rem;
+}
+.InfoDiv .StylingLine{
+    top: -6.5%;
+}
+.SecondLine{
+    position: relative;
+}
+.SecondLine .StylingLine{
+    position: absolute;
+    top: 10%;
+    height: 2rem;
 }
 /* Extra Navigation Stuff to Be inserted in this div */
 .InfoDiv__extraNavs{
     height: 2.3rem;
 }
 
-.CovidInfo > div{
+.CovidDiv{
     animation: moveUp 1s ease-out;
 }
 
-
+@keyframes glowingStick{
+    0%{
+        background: linear-gradient(90deg,red,cyan);
+    }
+    50%{
+        background: linear-gradient(90deg,cyan,red);
+    }
+    100%{
+        background: linear-gradient(90deg,red,cyan);
+    }
+}
 
 @keyframes moveUp{
     0%{

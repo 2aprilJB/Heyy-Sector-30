@@ -21,7 +21,7 @@ class Layout extends Component{
     render(){
         return(
             <div className = {classes.Layout}>
-                <Header onMenuClick = {this.onMenuClickHandler} />
+                <Header Gandhinagar = {this.props.Gandhinagar} color = {this.props.colors[0]} onMenuClick = {this.onMenuClickHandler} />
                 {this.state.showMenu?<Menu backDrop = {this.onBackDrop} />:null}
                 {this.props.children}
                 <Footer />

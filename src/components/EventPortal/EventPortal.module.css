@@ -3,7 +3,6 @@
 .EventPortal{
     box-sizing: border-box;
     margin: 0;
-    background-image: linear-gradient(180deg,#3989d4ea 10%, #fff 60%);
     display: flex;
     flex-direction: column; 
     align-items: center;

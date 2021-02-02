@@ -11,7 +11,7 @@ const showSupportIdea = (props)=>{
             iconColor: '#335d2d',
             buttColor: '#ffdd67',
             placeHolderInfo: 'It might not happen without your support as a Sponsor',
-            supportInfo: <div className = {classes.SponsorShipInfo}></div>,
+            supportInfo: <div className = {classes.SponsorshipInfo}>phuck you</div>,
         },
         {
             name: 'Volunteer',

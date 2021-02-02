@@ -156,8 +156,8 @@ class Map extends React.Component {
             containmentCoords: [[ 23.230272, 72.644532 ], [23.230262, 72.647032], [23.229158, 72.643073],]
          },
          sector_30:{
-            color: 'green',
-            setColor: 'green',
+            color: 'blue',
+            setColor: 'red',
             containmentCoords: [[23.24511,72.64973],[23.24725,72.65103],[23.24926,72.65232],]
          },
       }
@@ -230,7 +230,7 @@ class Map extends React.Component {
            if(this.state.localityProps[sector])
               tempColor = this.state.localityProps[sector].color;
             else tempColor = 'green';
-           return <Polygon onmouseout = {()=>this.Mouseout(sector)} key = {sector + 'polygon'} onmouseover = {()=>this.Mouseover(sector)} positions = {this.state.sectorPolyCoords[sector]} color = '#e94560' fillColor = {tempColor} weight = "3" />
+           return <Polygon onclick = {()=>this.Mouseout(sector)} key = {sector + 'polygon'} onclick = {()=>this.Mouseover(sector)} positions = {this.state.sectorPolyCoords[sector]} color = '#e94560' fillColor = {tempColor} weight = "3" />
         })}
         {containmentCircles}
       </LeafletMap>

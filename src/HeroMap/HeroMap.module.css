@@ -1,0 +1,160 @@
+.MainContainer{
+    background-color: #fff;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.MainContainer h2,.MainContainer h3{
+    margin: 0;
+    padding: 0;
+}
+.Header{
+    height: max-content;
+    width: 100%;
+    margin-top: 1rem;
+}
+.NavLinks{
+    position: relative;
+    width: 100%;
+    height: 1rem;
+}
+.NavLinks li{
+    z-index: 1;
+    position: absolute;
+    margin: -4rem 1rem 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    border-radius: 100%;    
+    height: 4.4rem;
+    width: 4.4rem;
+    background-color: rgb(255, 255, 255);
+    border: 3px solid#860000;
+}
+.NavLinks :nth-child(1){
+    top: -5rem;
+    right: 0.5rem;
+}
+.NavLinks :nth-child(2){
+    top: -5rem;
+    left: 1.4rem;
+}
+li ion-icon{
+    font-size: 2.5rem;
+}
+.StylingSaber{
+    position: absolute;
+    top: 9.2rem;
+    right: 50%;
+    transform: translateX(50%);
+    width: 13rem;
+    height: 0.6rem;
+    background-color: deepskyblue;
+    animation: glowingStick 0.09s ease-in-out infinite;
+}
+.Header h2{
+    font-family: 'Arvo';
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    letter-spacing: 0.4rem;
+}
+.Header h3{
+    font-family: 'Cairo';
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+}
+.StylingLine{
+    width: 7rem;
+    background-color: brown;
+    height: 0.3rem;
+    margin: 0.2rem auto;
+}
+.SecondLine{
+    width: 3.8rem;
+    background-color: crimson;
+}
+.FirstLine{
+    width: 14rem;
+    background-color: rgb(0, 87, 145);
+    margin: -1rem auto 2.2rem auto;
+}
+.Exhibit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 20px;
+    box-shadow: 0px 0px 30px rgba(0, 117, 184, 0.836);
+}
+.Exhibit_2{
+    box-shadow: 0px 0px 10px rgba(245, 0, 102, 0.397);
+    width: 90%;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.ZoneTitle{
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
+    font-size: 2.2rem;
+    font-family: 'Arvo';
+}
+.Zones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: max-content;
+    padding: 1rem 0 2rem 0;
+}
+.ZoneInfo{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: max-content;
+    margin-top: 0.8rem;
+}
+.Name{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 0.7px solid cyan;
+    font-family: 'Oswald';
+    letter-spacing: 0.2rem;
+    width: 70%;
+}
+.Icon{
+    border-radius: 100%;
+    height: 2rem;
+    width: 2rem;
+    border: 1px solid rgba(0, 155, 216, 0.473);
+    box-shadow: 0px 0px 10px rgba(34, 167, 255, 0.432);
+}
+.ZoneLink{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    border: 1px solid #000;
+}
+.ZoneLink ion-icon{
+    color: hotpink;
+}
+
+@keyframes glowingStick{
+    0%{
+        background: linear-gradient(red,cyan);
+    }
+    50%{
+        background: linear-gradient(cyan,red);
+    }
+    100%{
+        background: linear-gradient(red,cyan);
+    }
+}

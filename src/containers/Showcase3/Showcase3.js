@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Alerts from './Alerts/Alerts';
 import About from './About/About';
 import classes from './Showcase3.module.css';
+import Background from '../../assets/Images/Jungle_back.jpg';
 import Author from './Author/Author';
 import Posts from './Posts/Posts';
 
@@ -22,7 +23,7 @@ class Showcase3 extends Component{
         let activeSub = this.state.activeSubject;
         let subObjects = this.props.subObjects;
         return(
-            <div style = {{ backgroundColor: '#fff'}} className = {classes.Showcase}>
+            <div className = {classes.Showcase} style = {{background: 'url('+Background+')'}}>
                 <nav className = {classes.NavBar}>
                     {subObjects.map((subject,ind)=><li key = {subject + ind} onClick = {()=>this.activeSubjectHandler(ind)} style = {activeSub===ind?{boxShadow:'0px 0px 8px #000', border: '4px solid '+ navColor,backgroundImage: 'url(' + subject.navImage + ')'}:{backgroundImage: 'url(' + subject.navImage + ')'}}></li>)}
                 </nav>
